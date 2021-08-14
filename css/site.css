@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(to bottom right, white, #f1acaf);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.shadowed{
+    filter: drop-shadow(4px 4px 2px #ec6470)
+}
+
+img.bounce-image{
+    transform: rotate(23deg);
+    transform-origin: 50% 70%;
+    animation-duration: 0.75s;
+    animation-name: bouncing;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+@keyframes bouncing{
+    0%{
+        transform: rotate(23deg);
+        transform-origin: 50% 70%;
+        opacity: 100%;
+    }
+
+    100%{
+        transform: rotate(-23deg);
+        transform-origin: 50% 70%;
+        opacity: 100%;
+    }
+}
+
+img.show-image{
+    transform: rotate(23deg);
+    transform-origin: 50% 70%;    
+    animation-duration: 2s;
+    animation-name: show-image;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+@keyframes show-image{
+    0%{
+        opacity: 0;
+    }
+    1%{
+        opacity: 100%;
+    }
+    95%{
+        opacity: 100%;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+.images{
+    position:relative
+}
+
+.image{
+    position:absolute
+}
+
+.show-content{
+    animation-duration: 5.5s;
+    animation-name: show-content;
+    animation-iteration-count: 1;
+    animation-delay: 0;
+    opacity: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+@keyframes show-content{
+    0%{
+        opacity:0;
+    }
+    99%{
+        opacity: 0%;
+    }
+    100%{
+        opacity:100%
+    }
+}
+
+.content-image{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
